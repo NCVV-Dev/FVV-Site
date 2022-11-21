@@ -1,0 +1,12 @@
+# Ignore .php files
+*.php
+
+# Ignore .zip and .rar files
+*.zip
+*.rar
+
+# Ignore .txt files
+*.txt
+
+# Ignore any vscode files and folders
+*vscode*
