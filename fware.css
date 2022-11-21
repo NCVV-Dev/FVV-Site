@@ -77,14 +77,14 @@ body[data-theme="fware"] {
 	-ms-user-select: none;
 	-webkit-user-select: none;
 	margin: 0;
-	background: rgb(15,4,8);
-	background: linear-gradient(157deg, rgba(15,4,8,1) 0%, rgba(42,9,30,1) 55%, rgba(75,30,30,1) 100%);
+	background: rgb(9,1,3);
+	background: linear-gradient(157deg, rgba(9,1,3,1) 0%, rgba(23,4,16,1) 55%, rgba(52,14,14,1) 100%);
 	background-attachment: fixed;
 	background-position: center;
 	background-repeat: no-repeat;
 	background-size: cover;
 	overflow-y: scroll;
-	--navbarbg: rgba(39, 12, 39, 0.63);
+	--navbarbg: rgba(52,14,14,1);
 	--navbarbgtransparent: #151715b4;
 	--navbarbutton: rgba(149, 128, 255, 0.7);
 	--navbarbuttonhover: #ff80bf;
@@ -99,8 +99,8 @@ body[data-theme="fware"] {
 	--linkhover: rgba(149, 128, 255, 0.7);
 	--buttonbg: rgba(149, 128, 255, 0.7);
 	--buttonhover: #ff80bf;
-	--buttonsubmitbg: #319671;
-	--buttonsubmithover: #41bd8f;
+	--buttonsubmitbg: rgb(113, 37, 37);
+	--buttonsubmithover: rgb(255, 105, 105);
 	--tabcontents: rgba(171, 154, 255, 0.1);
 	--announcement: #414558;
 	--iconshield: #ff80bf;
@@ -166,6 +166,10 @@ h1 {
 	text-align: center;
 	font-size: 2.5rem;
 	margin-top: 80px;
+}
+
+.fware__title {
+	color:rgb(255, 101, 101);
 }
 
 p {
@@ -419,7 +423,6 @@ input[type="submit"]:hover {
 
 /* navbar panel */
 .navbar__wrapper {
-	background-color: var(--navbarbg);
 	width: 100%;
 	transition: all 300ms ease;
 	height: 50px;
