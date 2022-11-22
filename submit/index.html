@@ -55,13 +55,13 @@
             <div class="nojs">Seems like JavaScript is not supported or disabled on your browser. Some features might not work</div>
          </div>
       </noscript>
-        <h1 class="animate__animated animate__fadeInDown">submit config</h1>
+        <h1 class="animate__animated animate__fadeInDown">submit <span class="fware__title">config</span></h1>
         <div class="clm">
             <div class="infocolumn animate__animated animate__fadeIn">
                 <form class="contentform" action="upload.php" method="post" enctype="multipart/form-data">
                     <div class="uploadbtnwrapper">
-                        <button class="fileuplbtn" id="uploadTrigger">Select File</button>
-                        <input type="file" name="fileName" accept=".ncvp" class="hidden" id="uploadFile" autocomplete="off" required>
+                        <button class="fileuplbtn" id="uploadTrigger">Select .fw File</button>
+                        <input type="file" name="fileName" accept=".fw" class="hidden" id="uploadFile" autocomplete="off" required>
                     </div>
                     <h2>Enter your username<span>*</span></h2>
                     <input type="text" name="textName" id="authorName" autocomplete="off" required>
@@ -69,8 +69,8 @@
                     <input type="text" name="textSteam" id="authorSteam" autocomplete="off">
                     <h2>Additional Information/Description</h2>
                     <input type="text" name="textDesc" id="cfgDesc" autocomplete="off">
-                    <h2>2FA Code (leave blank if you don't have it)</h2>
-                    <input type="text" name="textDesc" id="cfgDesc" autocomplete="off">
+                    <h2>Identity Verification (leave blank)</h2>
+                    <input type="text" name="textAuth" id="cfgAuth" autocomplete="off">
                     <div class="uploadbtnwrapper">
                         <input type="submit" value="Submit" name="submit">
                     </div>
@@ -81,8 +81,7 @@
 </body>
 <script src="/js/fware_theme.js" crossorigin="anonymous"></script>
 <script src="/js/loaderfunc.js" crossorigin="anonymous"></script>
-<script src="/js/loaderfunc.js" crossorigin="anonymous"></script>
 <script src="/js/preventresubmit.js" crossorigin="anonymous"></script>
-<script src="/js/uploadhandler.js" crossorigin="anonymous"></script>
+<script src="/js/uploadtrigger.js"></script>
 
 </html>

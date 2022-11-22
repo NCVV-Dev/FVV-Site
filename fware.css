@@ -84,7 +84,7 @@ body[data-theme="fware"] {
 	background-repeat: no-repeat;
 	background-size: cover;
 	overflow-y: scroll;
-	--navbarbg: rgba(52,14,14,1);
+	--navbarbg: rgb(52, 14, 32);
 	--navbarbgtransparent: #151715b4;
 	--navbarbutton: rgba(149, 128, 255, 0.7);
 	--navbarbuttonhover: #ff80bf;
@@ -93,12 +93,12 @@ body[data-theme="fware"] {
 	--pcolor: #ffffff;
 	--generaltextcolor: #ffffff;
 	--itemtabcolor: #414558;
-	--itemtaboutline: #6b66c0;
+	--itemtaboutline: rgb(113, 37, 37);
 	--itemtabhover: #353277;
 	--itemtabhovereffect: rgb(255, 101, 101);
 	--linkhover: rgba(149, 128, 255, 0.7);
-	--buttonbg: rgba(149, 128, 255, 0.7);
-	--buttonhover: #ff80bf;
+	--buttonbg: rgb(113, 37, 37);
+	--buttonhover: rgb(255, 105, 105);
 	--buttonsubmitbg: rgb(113, 37, 37);
 	--buttonsubmithover: rgb(255, 105, 105);
 	--tabcontents: rgba(171, 154, 255, 0.1);
@@ -110,7 +110,7 @@ body[data-theme="fware"] {
 	--answertextcolor: #80ffea;
 	--questiontextcolor: white;
 	--tosqm: #ff9580;
-	--latosbackgr: #21222c;
+	--latosbackgr: rgb(21, 3, 3);
 	--latostitle: #6b66c0;
 	/* Image Preview Background */
 	--imagepreview: rgba(30, 56, 52, 0.345);
