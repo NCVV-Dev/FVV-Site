@@ -84,7 +84,7 @@ body[data-theme="fware"] {
 	background-repeat: no-repeat;
 	background-size: cover;
 	overflow-y: scroll;
-	--navbarbg: rgb(52, 14, 32);
+	--navbarbg: rgba(39, 12, 39, 0.8);
 	--navbarbgtransparent: #151715b4;
 	--navbarbutton: rgba(149, 128, 255, 0.7);
 	--navbarbuttonhover: #ff80bf;
