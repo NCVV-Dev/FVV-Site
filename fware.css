@@ -92,7 +92,7 @@ body[data-theme="fware"] {
 	--headercolor: #ffffff;
 	--pcolor: #ffffff;
 	--generaltextcolor: #ffffff;
-	--itemtabcolor: #414558;
+	--itemtabcolor: rgb(42, 6, 29);
 	--itemtaboutline: rgb(113, 37, 37);
 	--itemtabhover: #353277;
 	--itemtabhovereffect: rgb(255, 101, 101);
@@ -102,9 +102,9 @@ body[data-theme="fware"] {
 	--buttonsubmitbg: rgb(113, 37, 37);
 	--buttonsubmithover: rgb(255, 105, 105);
 	--tabcontents: rgba(171, 154, 255, 0.1);
-	--announcement: #414558;
+	--announcement: #58414b;
 	--iconshield: #ff80bf;
-	--featureditem: #ff80bf;
+	--featureditem: rgb(255, 105, 105);
 	/* LA/TOS THEME */
 	--tostextcolor: rgb(255, 255, 255);
 	--answertextcolor: #80ffea;
@@ -292,7 +292,7 @@ input[type="file"] {
 }
 
 input[type="text"] {
-	width: 20em;
+	width: 25em;
 	padding: 11px 15px;
 	margin: 8px 0;
 	border: 1px solid var(--itemtaboutline);
@@ -497,7 +497,8 @@ input[type="submit"]:hover {
 	height:auto;
 	flex-direction: column;
 	align-content: center;
-	background-color: var(--itemtabcolor);
+	background: rgb(9,1,3);
+	background: linear-gradient(185deg, rgba(9,1,3,1) 0%, rgba(23,4,16,1) 45%, rgba(52,14,14,1) 100%);
 	border: 1px solid var(--itemtaboutline);
 	border-radius: 10px;
 	transition-duration: 300ms;
