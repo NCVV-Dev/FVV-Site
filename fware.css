@@ -950,6 +950,12 @@ input[type="submit"]:hover {
 	font-weight: 800;
 }
 
+.moderator em {
+	position: relative;
+	top: 1px;
+	font-size: 20px;
+}
+
 .moderator__tabstyle {
 	background: rgb(16,0,55);
 	background: linear-gradient(50deg, rgba(16,0,55,1) 0%, #8c48fa 100%);
