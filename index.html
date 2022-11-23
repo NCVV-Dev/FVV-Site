@@ -30,16 +30,16 @@
 <body data-theme="fware" onload="initpicture()">
    <div class="navbar__wrapper">
       <div class="navbar">
-         <a href="https://ncvisualsvault.cc/mods/" rel="noopener">
+         <a href="https://ncvisualsvault.cc/mods/" rel="noopener" target="_blank">
             <span class="links_name">Mods Page</span>
          </a>
-         <a href="https://ncvisualsvault.cc/tos/">
+         <a href="https://ncvisualsvault.cc/tos/" rel="noopener" target="_blank">
             <span class="links_name">LA/TOS</span>
          </a>
          <a onclick="switchtheme()" class="themesw" style="cursor: pointer;">
             <span class="links_name">Switch Theme</span>
          </a>
-         <a href="https://github.com/NCVV-Dev/FVV-Site/issues/new/choose" target="_blank" rel="noopener">
+         <a href="https://github.com/NCVV-Dev/FVV-Site/issues/new/choose" rel="noopener" target="_blank">
             <span class="links_name">Report an Issue</span>
          </a>
          <a href="https://ncvisualsvault.cc/" rel="noopener">
@@ -65,27 +65,26 @@
          <div class="search__bar animate__animated animate__fadeIn">
             <input type="text" id="searchbar" placeholder="Search for visuals" autocomplete="off" onkeyup="search()">
          </div>
-         <div class="underdev">Almost done! Making sure everything is stable... <em class='bx bxs-wrench bx-tada'></em></div>
          <div class="cfgvrow">
-            <!--
+
             <div class="cfg__wrapper animate__animated animate__fadeIn">
-               <div class="cfg__tab">
+               <div class="cfg__tab moderator__tabstyle">
                   <div class="cfg__image__wrapper ">
-                     <img class="cfg__image" loading="lazy" src="" alt="">
+                     <img class="cfg__image" loading="lazy" src="media/showcase/seowned.png" alt="">
                   </div>
                   <div class="cfg__body">
                      <div class="cfg__title">
-                        Test
+                        SE-Owned
                      </div>
                      <div class="cfg__author">
-                        Author: <span class="default__link">Test</span>
+                        Author: <span class="default__link moderator">M-FeD <em class='bx bxs-check-circle'></em></span>
                      </div>
                      <div class="cfg__descr">
-                        Description test
+                        My visuals figgy :) (looks like se-owned as seen in my dreams)
                      </div>
-                     <div class="cfg__downloadbtn">
-                        <a class="cfg__dwnbtn" href="" rel="noopener">Download <em class='bx bxs-download'></em></a>
-                        <div class="upload_info tooltip" data-title="December 31 2022">
+                     <div class="cfg__downloadbtn ">
+                        <a class="cfg__dwnbtn moderator__btncolor" href="https://fedoraware.ncvisualsvault.cc/download/click.php?id=1" rel="noopener">Download <em class='bx bxs-download'></em></a>
+                        <div class="upload_info tooltip" data-title="November 24 2022">
                            <em class='bx bxs-time'></em>
                         </div>
                         <div class="dwn__count">
@@ -96,9 +95,10 @@
                   </div>
                </div>
             </div>
-         -->
+
          </div>
       </div>
+      <div id="preview" class="animate__animated animate__fadeIn" onclick="this.style.display='none';"></div>
    </div>
 </body>
 <script src="js/fware_theme.js" crossorigin="anonymous"></script>
