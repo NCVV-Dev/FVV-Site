@@ -35,9 +35,6 @@
          <a href="https://ncvisualsvault.cc/mods/" rel="noopener">
             <span class="links_name">Mods Page</span>
          </a>
-         <a href="https://ncvisualsvault.cc/tos/" rel="noopener">
-            <span class="links_name">LA/TOS</span>
-         </a>
          <a onclick="switchtheme()" class="themesw" style="cursor: pointer;">
             <span class="links_name">Switch Theme</span>
          </a>
@@ -59,18 +56,21 @@
       </noscript>
       <h1 class="animate__animated animate__fadeInDown">submit <span class="fware__title">config</span></h1>
          <div class="infocolumn animate__animated animate__fadeIn">
+               <div class="user__inform">
+                  Please read <a class="other__clickablelink" href="/tos/index.html#termsofservice" target="_blank" rel="noopener">LA/TOS</a> and <a class="other__clickablelink" href="/tos/index.html#faqq" target="_blank" rel="noopener">F.A.Q</a> before uploading which would help you with your successful visual config submission
+               </div>
                <form class="contentform" action="upload.php" method="post" enctype="multipart/form-data">
                   <div class="uploadbtnwrapper">
                      <button class="fileuplbtn" id="uploadTrigger">Select .fw File</button>
                      <input type="file" name="fileName" accept=".fw" class="hidden" id="uploadFile" autocomplete="off" required>
                   </div>
-                  <h2>Enter your username<span>*</span></h2>
+                  <h2>Enter your <span class="fware__title">username</span><span>*</span></h2>
                   <input type="text" name="textName" id="authorName" autocomplete="off" required>
-                  <h2>Enter your Steam/Telegram profile</h2>
+                  <h2>Enter your <span class="fware__title">Steam/Telegram</span> profile</h2>
                   <input type="text" name="textSteam" id="authorSteam" autocomplete="off">
-                  <h2>Additional Information/Description</h2>
+                  <h2>Visual config <span class="fware__title">Name/Description</span></h2>
                   <input type="text" name="textDesc" id="cfgDesc" autocomplete="off">
-                  <h2>Identity Verification (for moderators only)</h2>
+                  <h2>Identity Verification <span class="fware__title">(for moderators only)</span></h2>
                   <input type="text" name="textAuth" id="cfgAuth" autocomplete="off">
                   <div class="uploadbtnwrapper">
                      <input type="submit" value="Submit" name="submit">
