@@ -806,7 +806,7 @@ input[type="submit"]:hover {
 	font-family: Coda, sans-serif;
 	font-size: 22px;
 	text-align: center;
-	color: var(--linkhover);
+	color: var(--latostitle);
 	text-decoration: none;
 }
 
