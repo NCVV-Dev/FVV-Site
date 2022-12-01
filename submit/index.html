@@ -65,11 +65,11 @@
                      <input type="file" name="fileName" accept=".fw" class="hidden" id="uploadFile" autocomplete="off" required>
                   </div>
                   <h2>Enter your <span class="fware__title">username</span><span>*</span></h2>
-                  <input type="text" name="textName" id="authorName" autocomplete="off" required>
+                  <input type="text" name="textName" id="authorName" autocomplete="off" minlength="3" maxlength="32" required>
                   <h2>Enter your <span class="fware__title">Steam/Telegram</span> profile</h2>
-                  <input type="text" name="textSteam" id="authorSteam" autocomplete="off">
+                  <input type="text" name="textSteam" id="authorSteam" autocomplete="off" maxlength="300">
                   <h2>Visual config <span class="fware__title">Name/Description</span></h2>
-                  <input type="text" name="textDesc" id="cfgDesc" autocomplete="off">
+                  <input type="text" name="textDesc" id="cfgDesc" autocomplete="off" maxlength="300">
                   <h2>Identity Verification <span class="fware__title">(for moderators only)</span></h2>
                   <input type="text" name="textAuth" id="cfgAuth" autocomplete="off">
                   <div class="uploadbtnwrapper">
