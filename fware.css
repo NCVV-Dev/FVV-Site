@@ -1130,3 +1130,17 @@ h1 .headert {
 		justify-content: center;
 	}
 }
+
+/* Hat */
+.chrat {
+	position: relative;
+}
+
+.crhat img {
+	position: relative;
+	width: 60px;
+	height: 60px;
+	top: 117px;
+	left: 315px;
+	transform: rotate(10deg);
+}
