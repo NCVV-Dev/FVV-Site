@@ -17,6 +17,4 @@ This repository is **highly maintained**. Every issue or pull request made here 
 ## Files
 Some of the files will not appear in this repository such as **.php** files.
 
-## Contributors
-- #### [Fedoraware](https://github.com/Fedoraware/Fedoraware) - For making this project possible
-- #### [Sinner](https://github.com/SinnerK0N) - For pinpointing issues and providing feedback on updates
+#### Shout out to [Fedoraware](https://github.com/Fedoraware/Fedoraware) for making this project possible
