@@ -28,12 +28,8 @@
 </head>
 
 <body data-theme="fware" onload="initpicture()">
-   <div class="snowflake"></div>
    <div class="navbar__wrapper">
       <div class="navbar">
-         <a>
-            <span>❄️</span>
-         </a>
          <a href="https://ncvisualsvault.cc/mods/" rel="noopener" target="_blank">
             <span class="links_name">Mods Page</span>
          </a>
@@ -49,9 +45,6 @@
          <a href="https://ncvisualsvault.cc/" rel="noopener">
             <span class="links_name">Go back to NVV</span>
          </a>
-         <a>
-            <span>❄️</span>
-         </a>
       </div>
    </div>
    <div id="nf__popup"></div>
@@ -64,10 +57,7 @@
          </div>
       </noscript>
       <div class="grouped animate__animated animate__fadeInDown">
-         <div class="crhat">
-            <img src="media/crhat.png">
             <h1><span class="fware__title">fedoraware</span> - visuals vault</h1>
-         </div>
       </div>
       <p class="animate__animated animate__fadeInDown">all your fedoraware visual configs in one place</p>
       <div class="cont">
@@ -77,7 +67,21 @@
          <div class="search__bar animate__animated animate__fadeIn">
             <input type="text" id="searchbar" placeholder="Search for visuals..." autocomplete="off" onkeyup="search()">
          </div>
-         <div class="cfgvrow">
+         <div class="utility_buttons_wrapper animate__animated animate__fadeIn">
+            <div class="utility_buttons">
+               <em class='bx bx-sort'></em>
+               <a onclick="switchrandomizing()" class="utility_button">
+                  Shuffle
+               </a>
+               <a class="utility_button" onclick="sortbyname()">
+                  Sort By Name
+               </a>
+               <a class="utility_button" onclick="sortbymostdwnl()">
+                  Sort By Most Downloads
+               </a>
+            </div>
+         </div>
+         <div class="cfgvrow" id="randomize">
             <div class="cfg__wrapper animate__animated animate__fadeIn">
                <div class="cfg__tab moderator__tabstyle">
                   <div class="tag tag_mod">
@@ -408,7 +412,7 @@
                         Nitro
                      </div>
                      <div class="cfg__author">
-                        Uploader: <a class="default__link" href="http://steamcommunity.com/profiles/76561199225049795" target="_blank">BLS1980</a>
+                        Uploader: <a class="default__link contributor2" href="http://steamcommunity.com/profiles/76561199225049795" target="_blank">BLS1980</a>
                      </div>
                      <div class="cfg__descr">
                         Nitro Be Like
@@ -594,6 +598,10 @@
 
             <div class="cfg__wrapper animate__animated animate__fadeIn">
                <div class="cfg__tab">
+                  <div class="tag">
+                     Devs choice
+                     <em class='bx bxs-star'></em>
+                  </div>
                   <div class="cfg__image__wrapper">
                      <img class="cfg__image" loading="lazy" src="media/showcase/wowhack.png" alt="">
                   </div>
@@ -618,17 +626,92 @@
                </div>
             </div>
 
+            <div class="cfg__wrapper animate__animated animate__fadeIn">
+               <div class="cfg__tab">
+                  <div class="cfg__image__wrapper">
+                     <img class="cfg__image" loading="lazy" src="media/showcase/allah.png" alt="">
+                  </div>
+                  <div class="cfg__body">
+                     <div class="cfg__title">
+                        Fesh's config
+                     </div>
+                     <div class="cfg__author">
+                        Uploader: <a class="default__link" href="https://steamcommunity.com/profiles/76561199373724560" target="_blank">fesh</a>
+                     </div>
+                     <div class="cfg__descr not__provided">
+                        (No description provided)
+                     </div>
+                     <div class="cfg__downloadbtn">
+                        <a class="cfg__dwnbtn" href="https://fedoraware.ncvisualsvault.cc/download/click.php?id=21" rel="noopener">Download <em class='bx bxs-download'></em></a>
+                        <div class="dwn__count">
+                           <script>ccount_unique('21')</script>
+                           <em class='bx bxs-download'></em>
+                        </div>
+                     </div>
+                  </div>
+               </div>
+            </div>
+
+            <div class="cfg__wrapper animate__animated animate__fadeIn">
+               <div class="cfg__tab">
+                  <div class="tag">
+                     Devs choice
+                     <em class='bx bxs-star'></em>
+                  </div>
+                  <div class="cfg__image__wrapper">
+                     <img class="cfg__image" loading="lazy" src="media/showcase/custom.png" alt="">
+                  </div>
+                  <div class="cfg__body">
+                     <div class="cfg__title">
+                        Top #1 Visuals
+                     </div>
+                     <div class="cfg__author">
+                        Uploader: <a class="default__link contributor2" href="http://steamcommunity.com/profiles/76561199225049795" target="_blank">BLS1980</a>
+                     </div>
+                     <div class="cfg__descr not__provided">
+                        (No description provided)
+                     </div>
+                     <div class="cfg__downloadbtn">
+                        <a class="cfg__dwnbtn" href="https://fedoraware.ncvisualsvault.cc/download/click.php?id=22" rel="noopener">Download <em class='bx bxs-download'></em></a>
+                        <div class="dwn__count">
+                           <script>ccount_unique('22')</script>
+                           <em class='bx bxs-download'></em>
+                        </div>
+                     </div>
+                  </div>
+               </div>
+            </div>
+
+            <div class="cfg__wrapper animate__animated animate__fadeIn">
+               <div class="cfg__tab">
+                  <div class="cfg__image__wrapper">
+                     <img class="cfg__image" loading="lazy" src="media/showcase/ethereal.png" alt="">
+                  </div>
+                  <div class="cfg__body">
+                     <div class="cfg__title">
+                        Awesome visual config
+                     </div>
+                     <div class="cfg__author">
+                        Uploader: <a class="default__link" href="https://steamcommunity.com/profiles/76561199073142280" target="_blank">ascendedsion</a>
+                     </div>
+                     <div class="cfg__descr">
+                        ascendeds1on with tha supa hot fiya...)
+                     </div>
+                     <div class="cfg__downloadbtn">
+                        <a class="cfg__dwnbtn" href="https://fedoraware.ncvisualsvault.cc/download/click.php?id=23" rel="noopener">Download <em class='bx bxs-download'></em></a>
+                        <div class="dwn__count">
+                           <script>ccount_unique('23')</script>
+                           <em class='bx bxs-download'></em>
+                        </div>
+                     </div>
+                  </div>
+               </div>
+            </div>
+
          </div>
       </div>
       <div id="preview" class="animate__animated animate__fadeIn" onclick="this.style.display='none';"></div>
    </div>
 </body>
-<script src="js/fware_theme.js" crossorigin="anonymous"></script>
-<script src="js/loaderfunc.js" crossorigin="anonymous"></script>
-<script src="js/pictureprev.js" crossorigin="anonymous"></script>
-<script src="js/loaderfunc.js" crossorigin="anonymous"></script>
-<script src="js/uploadhandler.js" crossorigin="anonymous"></script>
-<script src="js/searchitem.js" crossorigin="anonymous"></script>
-<script src="js/downloads_manager.js" crossorigin="anonymous" defer></script>
-<script src="js/snowflakes.js" crossorigin="anonymous"></script>
+<script src="/js/main.js" crossorigin="anonymous"></script>
 </html>

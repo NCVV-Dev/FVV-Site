@@ -72,6 +72,8 @@ body[data-theme="nvv"] {
 	/* Tag Color */
 	--tagbg: #610aed89;
 	--tagmodbg: #610aed89;
+	/* Utility Tab Colors */
+	--utilitywrapper: #414558;
 }
 
 body[data-theme="fware"] {
@@ -124,6 +126,8 @@ body[data-theme="fware"] {
 	/* Tag Color */
 	--tagbg: rgba(242, 83, 83, 0.331);
 	--tagmodbg: #610aed89;
+	/* Utility Tab Colors */
+	--utilitywrapper: rgb(60, 16, 16);
 }
 
 * {
@@ -175,7 +179,7 @@ h1 {
 	font-weight: 700;
 	text-align: center;
 	font-size: 2.5rem;
-	margin-top: 80px;
+	margin-top: 100px;
 }
 
 .fware__title {
@@ -353,6 +357,50 @@ input[type="submit"]:hover {
 	cursor: pointer;
 	-webkit-transform: translateY(-2px);
 	transform: translateY(-2px);
+}
+
+/* Utility Buttons (separated from navbar) */
+.utility_buttons_wrapper {
+	display: flex;
+	background-color: var(--utilitywrapper);
+	margin: 10px;
+	margin-bottom: 15px;
+	height: 60px;
+	width: 480px;
+	border-radius: 5px;
+	justify-content: flex-start;
+	transition: all 300ms ease-in-out;
+}
+
+.utility_buttons {
+	display: flex;
+	color: var(--generaltextcolor);
+	font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+	transition: all 300ms ease-in-out;
+}
+
+.utility_button {
+	background-color: var(--buttonbg);
+	padding: 6px 13px;
+	margin: auto;
+	margin-left: 5px;
+	border-radius: 5px;
+	font-size: 15px;
+	transition: all 300ms ease-in-out;
+}
+
+.utility_buttons_wrapper em {
+	display: flex;
+	position: relative;
+	top: 20px;
+	font-size: 20px;
+	margin-right: 10px;
+	margin-left: 10px;
+}
+
+.utility_button:hover {
+	background-color: var(--buttonhover);
+	cursor: pointer;
 }
 
 /* Column for submit page */
