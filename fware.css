@@ -435,18 +435,7 @@ input[type="submit"]:hover {
 	text-align: center;
 }
 
-/* Styling of middle column */
-.infocolumn h1{
-	color: var(--generaltextcolor);
-	font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
-	text-transform: uppercase;
-	letter-spacing: 2px;
-	font-weight: 700;
-	text-align: center;
-	font-size: 23px;
-	margin: 20px;
-}
-
+/* Upload Button Styles */
 .uploadbtnwrapper {
 	justify-content: center;
 	margin-top: auto;
@@ -481,12 +470,11 @@ input[type="submit"]:hover {
 
 .contentform h2 {
 	color: var(--generaltextcolor);
-	font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
-	text-transform: uppercase;
+	font-family: 'Franklin Gothic', 'Arial Narrow', Arial, sans-serif;
 	letter-spacing: 2px;
-	font-weight: 700;
+	font-weight: 500;
 	text-align: center;
-	font-size: 18px;
+	font-size: 24px;
 }
 
 /* navbar panel */
