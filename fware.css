@@ -74,6 +74,15 @@ body[data-theme="nvv"] {
 	--tagmodbg: #610aed89;
 	/* Utility Tab Colors */
 	--utilitywrapper: #414558;
+	/* Checkboxes for all! */
+	--active: #6b66c0;
+	--active-inner: #fff;
+	--focus: 2px rgba(39, 94, 254, .3);
+	--border: #BBC1E1;
+	--border-hover: #275EFE;
+	--background: #fff;
+	--disabled: #F6F8FF;
+	--disabled-inner: #E1E6F9;
 }
 
 body[data-theme="fware"] {
@@ -128,6 +137,15 @@ body[data-theme="fware"] {
 	--tagmodbg: #610aed89;
 	/* Utility Tab Colors */
 	--utilitywrapper: rgb(50, 15, 24);
+	/* Checkboxes for all! */
+	--active: rgb(255, 105, 105);
+	--active-inner: #fff;
+	--focus: 2px rgb(113, 37, 37);
+	--border: #BBC1E1;
+	--border-hover: #275EFE;
+	--background: #fff;
+	--disabled: #F6F8FF;
+	--disabled-inner: #E1E6F9;
 }
 
 * {
@@ -179,11 +197,11 @@ h1 {
 	font-weight: 700;
 	text-align: center;
 	font-size: 2.5rem;
-	margin-top: 100px;
+	margin-top: 80px;
 }
 
 .fware__title {
-	color:rgb(255, 101, 101);
+	color: rgb(255, 101, 101);
 }
 
 p {
@@ -193,7 +211,7 @@ p {
 	font-size: 1.3rem;
 	animation-delay: 300ms;
 	font-weight: bold;
-	margin-bottom: 60px;
+	margin-bottom: 40px;
 }
 
 .solidbackground {
@@ -267,14 +285,14 @@ p {
 }
 
 /* Button upload config in main page */
-.opt__wrapper{
-	margin-top: 30px;
-	margin-bottom: 60px;
-	padding: 0 50px;
+.opt__wrapper {
+	position: relative;
+	display: inline-grid;
+	margin: 30px;
 	animation-delay: 400ms;
 }
 
-.opt__submitcfg{
+.opt__submitcfg {
 	background-color: var(--buttonsubmitbg);
 	color: white;
 	text-decoration: none;
@@ -286,7 +304,7 @@ p {
 	letter-spacing: 1px;
 }
 
-.opt__submitcfg:hover{
+.opt__submitcfg:hover {
 	background-color: var(--buttonsubmithover);
 	cursor: pointer;
 	box-shadow: 0px 0px 15px 1px var(--buttonsubmitglow);
@@ -359,6 +377,118 @@ input[type="submit"]:hover {
 	transform: translateY(-2px);
 }
 
+/* Checkboxes */
+.checkbox-wrapper-13 {
+	margin: 20px;
+}
+
+.checkbox-wrapper-13 span {
+	position: relative;
+	bottom: 1px;
+	color: var(--generaltextcolor);
+	font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+	font-size: 23px;
+	font-weight: 500;
+}
+
+.checkbox-wrapper-13 input[type=checkbox] {
+	-webkit-appearance: none;
+	-moz-appearance: none;
+	height: 21px;
+	outline: none;
+	display: inline-block;
+	vertical-align: top;
+	position: relative;
+	margin: 0;
+	cursor: pointer;
+	border: 1px solid var(--bc, var(--border));
+	background: var(--b, var(--background));
+	transition: background 0.3s, border-color 0.3s, box-shadow 0.2s;
+}
+
+.checkbox-wrapper-13 input[type=checkbox]:after {
+	content: "";
+	display: block;
+	left: 0;
+	top: 0;
+	position: absolute;
+	transition: transform var(--d-t, 0.3s) var(--d-t-e, ease), opacity var(--d-o, 0.2s);
+}
+
+.checkbox-wrapper-13 input[type=checkbox]:checked {
+	--b: var(--active);
+	--bc: var(--active);
+	--d-o: .3s;
+	--d-t: .6s;
+	--d-t-e: cubic-bezier(.2, .85, .32, 1.2);
+}
+
+.checkbox-wrapper-13 input[type=checkbox]:disabled {
+	--b: var(--disabled);
+	cursor: not-allowed;
+	opacity: 0.9;
+}
+
+.checkbox-wrapper-13 input[type=checkbox]:disabled:checked {
+	--b: var(--disabled-inner);
+	--bc: var(--border);
+}
+
+.checkbox-wrapper-13 input[type=checkbox]:disabled + label {
+	cursor: not-allowed;
+}
+
+.checkbox-wrapper-13 input[type=checkbox]:focus {
+	box-shadow: 0 0 0 var(--focus);
+}
+
+.checkbox-wrapper-13 input[type=checkbox]:not(.switch) {
+	width: 21px;
+}
+
+.checkbox-wrapper-13 input[type=checkbox]:not(.switch):after {
+	opacity: var(--o, 0);
+}
+
+.checkbox-wrapper-13 input[type=checkbox]:not(.switch):checked {
+	--o: 1;
+}
+
+.checkbox-wrapper-13 input[type=checkbox] + label {
+	display: inline-block;
+	vertical-align: middle;
+	cursor: pointer;
+	margin-left: 4px;
+}
+
+.checkbox-wrapper-13 input[type=checkbox]:not(.switch) {
+	border-radius: 7px;
+}
+
+.checkbox-wrapper-13 input[type=checkbox]:not(.switch):after {
+	width: 5px;
+	height: 9px;
+	border: 2px solid var(--active-inner);
+	border-top: 0;
+	border-left: 0;
+	left: 7px;
+	top: 4px;
+	transform: rotate(var(--r, 20deg));
+}
+
+.checkbox-wrapper-13 input[type=checkbox]:not(.switch):checked {
+	--r: 43deg;
+}
+
+.checkbox-wrapper-13 * {
+	box-sizing: inherit;
+}
+
+.checkbox-wrapper-13 *:before,
+  .checkbox-wrapper-13 *:after {
+	box-sizing: inherit;
+}
+
 /* Utility Buttons (separated from navbar) */
 .utility_buttons_wrapper {
 	display: flex;
@@ -375,7 +505,7 @@ input[type="submit"]:hover {
 .utility_buttons {
 	display: flex;
 	color: var(--generaltextcolor);
-	font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+	font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
 	transition: all 300ms ease-in-out;
 }
 
@@ -427,8 +557,7 @@ input[type="submit"]:hover {
 
 .user__inform {
 	position: relative;
-	margin-left: 50px;
-	margin-right: 50px;
+	margin: 30px;
 	color: var(--generaltextcolor);
 	font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
 	font-size: 25px;
@@ -444,7 +573,14 @@ input[type="submit"]:hover {
 	color: white;
 }
 
-.fileuplbtn{
+.uploadbtnwrapper p {
+	font-family: inherit;
+	position: relative;
+	margin: 0;
+	top: 21px;
+}
+
+.fileuplbtn {
 	display: flex;
 	justify-content: center;
 	background-color: var(--buttonbg);
@@ -465,16 +601,14 @@ input[type="submit"]:hover {
 	cursor: pointer;
 	-webkit-transform: translateY(-2px);
 	transform: translateY(-2px);
-	
 }
 
 .contentform h2 {
 	color: var(--generaltextcolor);
-	font-family: 'Franklin Gothic', 'Arial Narrow', Arial, sans-serif;
-	letter-spacing: 2px;
+	font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+	font-size: 25px;
 	font-weight: 500;
 	text-align: center;
-	font-size: 24px;
 }
 
 /* navbar panel */
@@ -516,7 +650,7 @@ input[type="submit"]:hover {
 	text-align: center;
 }
 
-.navbar a:before{
+.navbar a:before {
 	position: absolute;
 	bottom: 0;
 	left: 0;
@@ -544,7 +678,7 @@ input[type="submit"]:hover {
 	padding: 0 10px;
 }
 
-.cfgvrow.mods{
+.cfgvrow.mods {
 	grid-template-columns: repeat(auto-fill,minmax(300px,1fr));
 }
 
@@ -552,7 +686,7 @@ input[type="submit"]:hover {
 	position: relative;
 	color: var(--generaltextcolor);
 	display: flex;
-	height:auto;
+	height: auto;
 	flex-direction: column;
 	align-content: center;
 	background: var(--cfgtabcolor);
@@ -599,13 +733,13 @@ input[type="submit"]:hover {
 	overflow: hidden;
 }
 
-.cfg__image:hover{
-	cursor:zoom-in;
+.cfg__image:hover {
+	cursor: zoom-in;
 	transform: scale(1.1);
 }
 
 .cfg__image__wrapper {
- 	overflow: hidden;
+	overflow: hidden;
 }
 
 .cfg__body {
@@ -966,7 +1100,6 @@ input[type="submit"]:hover {
 }
 
 .contributor6 {
-
 	font-family: Roboto, sans-serif;
 	color: #fff;
 	text-shadow: 0 0 7px #ffffff;
@@ -1071,25 +1204,53 @@ input[type="submit"]:hover {
 	-webkit-animation: fadein 0.5s, fadeout 0.5s 2.5s;
 	animation: fadein 0.5s, fadeout 0.5s 2.5s;
 }
-  
+
 @-webkit-keyframes fadein {
-	from {bottom: -30px; opacity: 0;} 
-	to {bottom: 0; opacity: 1;}
+	from {
+		bottom: -30px;
+		opacity: 0;
+	}
+
+	to {
+		bottom: 0;
+		opacity: 1;
+	}
 }
-  
+
 @keyframes fadein {
-	from {bottom: -30px; opacity: 0;}
-	to {bottom: 0; opacity: 1;}
+	from {
+		bottom: -30px;
+		opacity: 0;
+	}
+
+	to {
+		bottom: 0;
+		opacity: 1;
+	}
 }
-  
+
 @-webkit-keyframes fadeout {
-	from {bottom: 0; opacity: 1;} 
-	to {bottom: -30px; opacity: 0;}
+	from {
+		bottom: 0;
+		opacity: 1;
+	}
+
+	to {
+		bottom: -30px;
+		opacity: 0;
+	}
 }
-  
+
 @keyframes fadeout {
-	from {bottom: 0; opacity: 1;}
-	to {bottom: -30px; opacity: 0;}
+	from {
+		bottom: 0;
+		opacity: 1;
+	}
+
+	to {
+		bottom: -30px;
+		opacity: 0;
+	}
 }
 
 /* Download Count div */ 
@@ -1202,4 +1363,3 @@ h1 .headert {
 	left: 315px;
 	transform: rotate(10deg);
 }
-

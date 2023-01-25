@@ -205,13 +205,14 @@ function sortbyname(){
 function sortbymostdwnl() {
   let parent = $("#randomize");
   let divs = parent.children();
+
   var OrderedDivsByDwnl = divs.sort(function(a, b) {    
     // Fetch raw values
     const aRaw = fetchTextNodesContent($(a).find(".dwn__count"));
     const bRaw = fetchTextNodesContent($(b).find(".dwn__count"));    
+
     // DEBUG: Show raw parsed values
     //console.log('raw values:', `a: "${aRaw}"`, `b: "${bRaw}"`);
-
     const aParsed = parseInt(aRaw);
     const bParsed = parseInt(bRaw);
 
@@ -232,3 +233,12 @@ return $target
 .end()      // Go back to selected element
 .text();
 }
+
+$('#c1-13').change(function() {
+  $('#identityverf__wrapper').toggle();
+});
+
+document.getElementById('uploadFile').addEventListener('change', (event) => {
+  window.selectedFile = event.target.files[0];
+  document.getElementById('file_name').innerHTML = window.selectedFile.name;
+});

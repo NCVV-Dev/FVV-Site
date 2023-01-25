@@ -46,34 +46,39 @@
          </a>
       </div>
    </div>
+   <div id="nf__popup"></div>
    <div class="bodywrapper" style="height: 0;">
       <div id="modal__overlay"></div>
       <div id="progress"></div>
-      <noscript>
-         <div class="announcement">
-            <div class="nojs">Seems like JavaScript is not supported or disabled on your browser. Some features might not work</div>
-         </div>
-      </noscript>
       <h1 class="animate__animated animate__fadeInDown">submit <span class="fware__title">config</span></h1>
          <div class="infocolumn animate__animated animate__fadeIn">
                <div class="user__inform">
-                  Please read <a class="other__clickablelink" href="/tos/index.html#termsofservice" target="_blank" rel="noopener">LA/TOS</a> and <a class="other__clickablelink" href="/tos/index.html#faqq" target="_blank" rel="noopener">F.A.Q</a> before uploading which would help you with your successful visual config submission
+                  Please read <a class="other__clickablelink" href="/tos/index.html#termsofservice" target="_blank" rel="noopener">LA/TOS</a> and <a class="other__clickablelink" href="/tos/index.html#faqq" target="_blank" rel="noopener">F.A.Q</a> before uploading which would help you with your successful visual config submission!
                </div>
                <form class="contentform" action="upload.php" method="post" enctype="multipart/form-data">
                   <div class="uploadbtnwrapper">
                      <button class="fileuplbtn" id="uploadTrigger">Select .fw File</button>
                      <input type="file" name="fileName" accept=".fw" class="hidden" id="uploadFile" autocomplete="off" required>
+                     <p id="file_name"></p>
                   </div>
-                  <h2>Enter your <span class="fware__title">username</span><span>*</span></h2>
+                  <h2>Enter your <span class="fware__title">Username</span><span>*</span></h2>
                   <input type="text" name="textName" id="authorName" autocomplete="off" minlength="3" maxlength="32" required>
-                  <h2>Enter your <span class="fware__title">Steam/Telegram</span> profile</h2>
-                  <input type="text" name="textSteam" id="authorSteam" autocomplete="off" maxlength="300">
-                  <h2>Visual config <span class="fware__title">Name/Description</span></h2>
-                  <input type="text" name="textDesc" id="cfgDesc" autocomplete="off" maxlength="300">
-                  <h2>Identity Verification <span class="fware__title">(for moderators only)</span></h2>
-                  <input type="text" name="textAuth" id="cfgAuth" autocomplete="off">
+                  <h2>Your profile <span class="fware__title">Steam URL</span> (optional)</h2>
+                  <input type="text" name="textSteam" placeholder="Must start from https://" id="authorSteam" autocomplete="off" maxlength="300">
+                  <h2>Visual config <span class="fware__title">Name/Description</span> (optional)</h2>
+                  <input type="text" name="textDesc" placeholder="If none is set, will be given random" id="cfgDesc" autocomplete="off" maxlength="300">
+
+                  <div class="checkbox-wrapper-13">
+                     <input id="c1-13" type="checkbox">
+                     <label for="c1-13"><span>I am moderator of FVV</span></label>
+                   </div>
+
+                  <div id="identityverf__wrapper" style="display: none;">
+                     <h2>Identity verification SHA256 code</h2>
+                     <input type="text" name="textAuth" id="cfgAuth" autocomplete="off">
+                  </div>
                   <div class="uploadbtnwrapper">
-                     <input type="submit" value="Submit" name="submit">
+                     <input type="submit" value="Submit" name="submit" id="submit">
                   </div>
                </form>
          </div>
