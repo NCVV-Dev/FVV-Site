@@ -133,7 +133,7 @@ body[data-theme="fware"] {
 	/* Image Preview Background */
 	--imagepreview: rgba(30, 56, 52, 0.345);
 	/* Tag Color */
-	--tagbg: rgba(242, 83, 83, 0.331);
+	--tagbg: rgba(242, 83, 83, 0.696);
 	--tagmodbg: #610aed89;
 	/* Utility Tab Colors */
 	--utilitywrapper: rgb(50, 15, 24);
@@ -1057,10 +1057,29 @@ input[type="submit"]:hover {
 .contributor3 {
 	font-family: Roboto, sans-serif;
 	text-decoration: none;
-	color: rgb(180, 135, 255);
+	background: linear-gradient(170deg, rgb(112, 84, 158) 20%, rgb(180, 135, 255) 50%, rgb(112, 84, 158) 80%);
+	background-clip: border-box;
+	background-size: 200% auto;
+	-webkit-text-fill-color: transparent;
+	-webkit-background-clip: text;
+	animation: contr3anim 4s ease-in-out infinite;
 }
 
-.contributor4 {
+@keyframes contr3anim {
+	0% {
+		background-position: 200% auto;
+	}
+
+	50% {
+		background-position: 200% top;
+	}
+
+	100% {
+		background-position: 200% auto;
+	}
+}
+
+.contributor5 {
 	font-family: Roboto, sans-serif;
 	background-image: linear-gradient(-225deg, rgb(255, 135, 135) 0%, #ffffff 100%);
 	background-size: 200% auto;
@@ -1069,23 +1088,23 @@ input[type="submit"]:hover {
 	background-clip: text;
 	-webkit-background-clip: text;
 	-webkit-text-fill-color: transparent;
-	animation: contr4anim 1.5s linear infinite;
+	animation: contr5anim 1.5s linear infinite;
 }
 
-@keyframes contr4anim {
+@keyframes contr5anim {
 	to {
 		background-position: 200% center;
 	}
 }
 
-.contributor5 {
+.contributor6 {
 	font-family: Roboto, sans-serif;
 	color: rgb(127, 68, 68);
-	animation: contr5anim 3s ease-in-out infinite;
+	animation: contr6anim 3s ease-in-out infinite;
 	font-weight: 600;
 }
 
-@keyframes contr5anim {
+@keyframes contr6anim {
 	0% {
 		color: rgb(127, 68, 68);
 	}
@@ -1099,34 +1118,47 @@ input[type="submit"]:hover {
 	}
 }
 
-.contributor6 {
+.contributor7 {
 	font-family: Roboto, sans-serif;
 	color: #fff;
 	text-shadow: 0 0 7px #ffffff;
 	font-weight: 700;
 }
 
-.contributor7 {
-	font-family: Roboto, sans-serif;
-	background: linear-gradient(180deg, #ff36a5 0%, #4d8bff 100%, #ffe657);
-	text-shadow: 1px 0px 5px rgb(204 0 255), 1px 0px 3px rgb(211 37 255);
-	background-clip: border-box;
-	-webkit-background-clip: text;
-	-webkit-text-fill-color: transparent;
-	font-weight: 900;
-}
-
 .contributor8 {
 	font-family: Roboto, sans-serif;
-	text-shadow: 2px 2px 4px rgb(255, 101, 101);
-	background: radial-gradient(circle, #ff8001 01%, #ff0b56 63%, #d50007 77%);
+	background: radial-gradient(#ff109b, #8c48fa);
 	background-clip: border-box;
-	-webkit-text-fill-color: transparent;
+	text-shadow: 0px 0px 5px rgb(255 255 255 / 61%),
+		-1px -1px 1px rgb(255 255 255 / 61%), 1px 0px 2px rgb(204 0 255),
+		0px -1px 1px rgba(234, 46, 255, 0), 1px 0px 2px rgb(211 37 255),
+		0px -1px 1px rgba(255, 255, 255, 0.618), 0px 1px 1px rgb(166 0 248 / 56%),
+		-1px 3px 1px rgba(255, 34, 34, 0.33);
 	-webkit-background-clip: text;
-	font-weight: 1000;
+	-webkit-text-fill-color: transparent;
+	font-weight: 800;
 }
 
-.contributor8 img {
+.contributor10 {
+	font-family: Roboto, sans-serif;
+	color: #fff;
+	font-weight: 1000;
+	background: linear-gradient(90deg, rgba(255,128,1,1) 0%, rgba(255,11,86,1) 50%, rgba(213,0,7,1) 100%);
+	background-clip: border-box;
+	background-size: 200% auto;
+	-webkit-text-fill-color: transparent;
+	-webkit-background-clip: text;
+	animation: contr10anim 1s ease-in-out infinite;
+	text-shadow: 0px 0px 5px rgba(249, 73, 73, 0.61)
+}
+
+@keyframes contr10anim {
+	to {
+		background-position: 200% center;
+	}
+}
+
+.contributor10 img {
 	position: relative;
 	top: 5px;
 	width: 25px;
