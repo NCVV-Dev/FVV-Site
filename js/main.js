@@ -35,12 +35,14 @@ document.addEventListener(
           o = 0,
           r = n.length;
       if (0 == r) return l();
+
       function i() {
           let e = (((100 / r) * (o += 1)) << 0) + "%";
           if (((t.style.width = e), o === r)) return l();
       }
+
       function l() {
-          setTimeout(function () {
+          setTimeout(function() {
               (t.style.opacity = "none"), (t.style.opacity = 0);
           }, 1800);
       }
@@ -55,9 +57,9 @@ document.addEventListener(
 // Find the most downloaded config and assign icon with text to the tab
 let highestNumber = 0;
 document.querySelectorAll('.dwn__count').forEach(elem => {
-    let downCount = parseInt(elem.innerText.trim())
-    if (downCount > highestNumber)
-        highestNumber = downCount
+  let downCount = parseInt(elem.innerText.trim())
+  if (downCount > highestNumber)
+      highestNumber = downCount
 });
 
 let icon = document.createElement("em");
@@ -68,10 +70,9 @@ icon.className = "bx bxs-hot tooltip";
 icon.style = "color: var(--buttonhover);";
 
 document.querySelectorAll('.dwn__count').forEach(elem => {
-  if (parseInt(elem.innerText.trim()) == highestNumber)
-  {
-    elem.appendChild(popular.cloneNode(true));
-    elem.appendChild(icon.cloneNode(true));
+  if (parseInt(elem.innerText.trim()) == highestNumber) {
+      elem.appendChild(popular.cloneNode(true));
+      elem.appendChild(icon.cloneNode(true));
   }
 });
 
@@ -102,9 +103,11 @@ function switchtheme() {
 function initpicture() {
   let e = document.querySelectorAll(".cfgvrow img"),
       c = document.querySelector("#preview"),
-      r = { "background-size": "60%" };
+      r = {
+          "background-size": "60%"
+      };
   e.forEach((e) => {
-      e.addEventListener("click", function () {
+      e.addEventListener("click", function() {
           (c.style.backgroundImage = "url(" + e.src + ")"), (c.style.display = "block"), Object.assign(c.style, r);
       });
   });
@@ -112,89 +115,90 @@ function initpicture() {
 
 // Search Functionality
 function search() {
-	let input = document.getElementById('searchbar').value
-	input=input.toLowerCase();
-	let cfgw = document.getElementsByClassName('cfg__wrapper');
-	
-	for (i = 0; i < cfgw.length; i++) {
-		if (!cfgw[i].innerHTML.toLowerCase().includes(input)) {
-			cfgw[i].style.display="none";
-		}
-		else {
-			cfgw[i].style.display="block";				
-		}
-	}
+  let input = document.getElementById('searchbar').value
+  input = input.toLowerCase();
+  let cfgw = document.getElementsByClassName('cfg__wrapper');
+
+  for (i = 0; i < cfgw.length; i++) {
+      if (!cfgw[i].innerHTML.toLowerCase().includes(input)) {
+          cfgw[i].style.display = "none";
+      } else {
+          cfgw[i].style.display = "block";
+      }
+  }
 }
 
 // Notification System
-$(function () {
+$(function() {
   let e = document.getElementById("nf__popup");
-  "success" == getCookie("submit")
-      ? ((e.style.color = "let(--buttonsubmitbg)"), (e.innerHTML = "Visual config submitted!"), (e.className = "show"))
-      : "fail" == getCookie("submit") && ((e.style.color = "var(--warn)"), (e.innerHTML = "Something went wrong :("), (e.className = "show")),
+  "success" == getCookie("submit") ?
+      ((e.style.color = "let(--buttonsubmitbg)"), (e.innerHTML = "Visual config submitted!"), (e.className = "show")) :
+      "fail" == getCookie("submit") && ((e.style.color = "var(--warn)"), (e.innerHTML = "Something went wrong :("), (e.className = "show")),
       eraseCookie("submit"),
-      setTimeout(function () {
+      setTimeout(function() {
           e.className = e.className.replace("show", "");
       }, 3e3);
 });
 
 // Trigger for upload button
-$("#uploadTrigger").click(function(){$("#uploadFile").click()});
+$("#uploadTrigger").click(function() {
+  $("#uploadFile").click()
+});
 
 // Shuffling Visual Configs randomly
 var t = document.getElementById("nf__popup");
 
-function switchrandomizing(){
-    if(getCookie("EnableShuffle") == "true"){
-        setCookie("EnableShuffle", "false", 365);
-        localStorage.setItem('enableshuffle', 'false');
+function switchrandomizing() {
+  if (getCookie("EnableShuffle") == "true") {
+      setCookie("EnableShuffle", "false", 365);
+      localStorage.setItem('enableshuffle', 'false');
 
-        t.style.color="var(--warn)";
-        t.innerHTML =  "Visual config shuffle disabled";
-        t.className = "show";
-        setTimeout(function(){ 
-            t.className = t.className.replace("show", "");
-        }, 3000);
-    } else {
-        setCookie("EnableShuffle", "true", 365);
-        localStorage.setItem('enableshuffle', 'true');
+      t.style.color = "var(--warn)";
+      t.innerHTML = "Visual config shuffle disabled";
+      t.className = "show";
+      setTimeout(function() {
+          t.className = t.className.replace("show", "");
+      }, 3000);
+  } else {
+      setCookie("EnableShuffle", "true", 365);
+      localStorage.setItem('enableshuffle', 'true');
 
-        t.style.color="var(--buttonsubmitbg)";
-        t.innerHTML =  "Visual config shuffle enabled!";
-        t.className = "show";
-        setTimeout(function(){ 
-            t.className = t.className.replace("show", "");
-        }, 3000);
-    }
+      t.style.color = "var(--buttonsubmitbg)";
+      t.innerHTML = "Visual config shuffle enabled!";
+      t.className = "show";
+      setTimeout(function() {
+          t.className = t.className.replace("show", "");
+      }, 3000);
+  }
 }
 
 $(function() {
-  if(getCookie("EnableShuffle") == "true" && localStorage.getItem('enableshuffle') == 'true'){
-  let parent = $("#randomize");
-  let divs = parent.children();
-  divs.sort(function(a, b) {
-    return 0.5 - Math.random();
-  });
-  parent.append(divs);
+  if (getCookie("EnableShuffle") == "true" && localStorage.getItem('enableshuffle') == 'true') {
+      let parent = $("#randomize");
+      let divs = parent.children();
+      divs.sort(function(a, b) {
+          return 0.5 - Math.random();
+      });
+      parent.append(divs);
 
-  t.style.color="var(--buttonsubmitbg)";
-  t.innerHTML =  "Shuffling visual configs...";
-  t.className = "show";
-  setTimeout(function(){ 
-      t.className = t.className.replace("show", "");
-  }, 3000);
-} else {
-  localStorage.setItem('enableshuffle', 'false');
-  setCookie("EnableShuffle", "false", 365)
-}
+      t.style.color = "var(--buttonsubmitbg)";
+      t.innerHTML = "Shuffling visual configs...";
+      t.className = "show";
+      setTimeout(function() {
+          t.className = t.className.replace("show", "");
+      }, 3000);
+  } else {
+      localStorage.setItem('enableshuffle', 'false');
+      setCookie("EnableShuffle", "false", 365)
+  }
 });
 
 // Sort visual configs by name
-function sortbyname(){
+function sortbyname() {
   let parent = $("#randomize");
   let divs = parent.children();
 
-  var OrderedDivsByName = divs.sort(function (a, b) {
+  var OrderedDivsByName = divs.sort(function(a, b) {
       return $(a).find(".cfg__title").text() > $(b).find(".cfg__title").text();
   });
 
@@ -205,30 +209,41 @@ function sortbyname(){
 function sortbymostdwnl() {
   let parent = $("#randomize");
   let divs = parent.children();
-  var OrderedDivsByDwnl = divs.sort(function(a, b) {    
-    // Fetch raw values
-    const aRaw = fetchTextNodesContent($(a).find(".dwn__count"));
-    const bRaw = fetchTextNodesContent($(b).find(".dwn__count"));    
-    // DEBUG: Show raw parsed values
-    //console.log('raw values:', `a: "${aRaw}"`, `b: "${bRaw}"`);
 
-    const aParsed = parseInt(aRaw);
-    const bParsed = parseInt(bRaw);
+  var OrderedDivsByDwnl = divs.sort(function(a, b) {
+      // Fetch raw values
+      const aRaw = fetchTextNodesContent($(a).find(".dwn__count"));
+      const bRaw = fetchTextNodesContent($(b).find(".dwn__count"));
 
-    // DEBUG: Show parsed values
-    //console.log('parsed values:', `a: "${aParsed}"`, `b: "${bParsed}"`);
+      // DEBUG: Show raw parsed values
+      //console.log('raw values:', `a: "${aRaw}"`, `b: "${bRaw}"`);
+      const aParsed = parseInt(aRaw);
+      const bParsed = parseInt(bRaw);
 
-    //Compare the values
-    return bParsed - aParsed;
+      // DEBUG: Show parsed values
+      //console.log('parsed values:', `a: "${aParsed}"`, `b: "${bParsed}"`);
+
+      //Compare the values
+      return bParsed - aParsed;
   })
   parent.append(OrderedDivsByDwnl);
 }
 
-function fetchTextNodesContent($target){
-return $target
-.clone()    // Clone the element
-.children() // Select all the children
-.remove()   // Remove all the children
-.end()      // Go back to selected element
-.text();
+function fetchTextNodesContent($target) {
+  return $target
+      .clone() // Clone the element
+      .children() // Select all the children
+      .remove() // Remove all the children
+      .end() // Go back to selected element
+      .text();
 }
+
+
+$('#c1-13').change(function() {
+  $('#identityverf__wrapper').toggle();
+});
+
+document.getElementById('uploadFile').addEventListener('change', (event) => {
+  window.selectedFile = event.target.files[0];
+  document.getElementById('file_name').innerHTML = window.selectedFile.name;
+});
