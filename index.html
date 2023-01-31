@@ -49,6 +49,9 @@
    </div>
    <div id="nf__popup"></div>
    <div class="bodywrapper">
+      <div class="announcement">
+         <div class="announcetext">Visual config uploading has been paused. We are working on it to get it back! <em class='bx bxs-wrench bx-tada'></em></div>
+      </div>
       <div id="modal__overlay"></div>
       <div id="progress"></div>
       <div class="grouped animate__animated animate__fadeInDown">
@@ -57,7 +60,7 @@
       <p class="animate__animated animate__fadeInDown">all your fedoraware visual configs in one place</p>
       <div class="cont">
          <div class="opt__wrapper animate__animated animate__fadeInDown">
-            <a href="submit/" class="opt__submitcfg">Submit Visual Config</a>
+            <a href="submit/" class="opt__submitcfg">Submit Visual Config <em class='bx bxs-error-circle'></em></a>
          </div>
          <div class="search__bar animate__animated animate__fadeIn">
             <input type="text" id="searchbar" placeholder="Search for visuals..." autocomplete="off" onkeyup="search()">
@@ -81,7 +84,7 @@
                <div class="cfg__tab moderator__tabstyle">
                   <div class="tag tag_mod">
                      Chosen by community
-                     <em class='bx bxs-medal' ></em>
+                     <em class='bx bxs-medal'></em>
                   </div>
                   <div class="cfg__image__wrapper ">
                      <img class="cfg__image" loading="lazy" src="media/showcase/seowned.png" alt="">
@@ -780,6 +783,8 @@
                   </div>
                </div>
             </div>
+
+            
          </div>
       </div>
       <div id="preview" class="animate__animated animate__fadeIn" onclick="this.style.display='none';"></div>
